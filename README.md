@@ -4,7 +4,7 @@
 
 Implemented a real-time embedded application on the **ATmega328P (8-bit AVR architecture)** using an 8×8 WS2812B NeoPixel matrix and push-button inputs. The project focuses on **low-level I/O control, timing constraints, and state-driven execution** on a resource-limited microcontroller.
 
-$\color{red}{\text{Note: the code is AI-generated using Claude Code and was not written by me. The code was obtained via prompting the AI to meet specific \m regulations that pertained to this game. The reason for this is because it's an Electrical Engineering course, so testing of firwmare
+$\color{red}{\text{Note: the code is AI-generated using Claude Code and was not written by me. The code was obtained via prompting the AI to meet specific <br> regulations that pertained to this game. The reason for this is because it's an Electrical Engineering course, so testing of firwmare
 and programmability is not as valued as the actual hardware, soldering, and design process.}}$
 
 ---
