@@ -6,6 +6,7 @@ Implemented a real-time embedded application on the **ATmega328P (8-bit AVR arch
 
 $${\color{red}Note: the code is AI-generated using Claude Code and was not written by me. The code was obtained via prompting the AI to meet specific regulations that pertained to this game. The reason for this is because it's an Electrical Engineering course, so testing of firwmare
 and programmability is not as valued as the actual hardware, soldering, and design process.}$$ 
+$\color{red}{\text{Your red text here}}$
 
 ---
 
