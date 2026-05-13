@@ -4,6 +4,9 @@
 
 Implemented a real-time embedded application on the **ATmega328P (8-bit AVR architecture)** using an 8×8 WS2812B NeoPixel matrix and push-button inputs. The project focuses on **low-level I/O control, timing constraints, and state-driven execution** on a resource-limited microcontroller.
 
+Note: the code is AI-generated using Claude Code and was not written by me. The code was obtained via prompting the AI to meet specific regulations that pertained to this game. The reason for this is because it's an Electrical Engineering course, so testing of firwmare
+and programmability is not as valued as the actual hardware, soldering, and design process.
+
 ---
 
 ## Hardware
@@ -28,20 +31,19 @@ Implemented a real-time embedded application on the **ATmega328P (8-bit AVR arch
 ### Input Handling
 
 * Direct GPIO reads via `digitalRead` abstraction
-* Edge detection to prevent repeated triggers
-* Minimal input design (2 buttons → directional control encoding)
+* Edge detection 
+* Minimal input design (2 buttons)
 
 ### Data Representation
 
 * Snake body stored as parallel coordinate arrays (`int x[]`, `int y[]`)
 * Fixed-size buffer (bounded by SRAM constraints)
-* Sequential memory access pattern (cache-friendly for AVR)
+* Sequential memory access pattern 
 
 ## LED Interface (WS2812B)
 
 * Serial protocol requires **precise timing (~800 kHz)**
 * Offloaded to Adafruit NeoPixel library (bit-banged signal generation)
-* Custom 2D → 1D index mapping for framebuffer abstraction
 
 ---
 
@@ -53,11 +55,3 @@ Implemented a real-time embedded application on the **ATmega328P (8-bit AVR arch
   * integer arithmetic (ADD, SUB)
   * comparisons and branches (BRNE, BREQ equivalents)
 * Tight loops (snake shift, collision scan) map directly to simple instruction sequences
-
-### Timing & Determinism
-
-* No OS / interrupts used for scheduling → fully cooperative loop
-* Execution time predictable per frame
-* Game speed controlled via software timing rather than hardware timers
-
----
